@@ -5,7 +5,7 @@ import 'package:gtribe/notification_screen.dart';
 import 'package:gtribe/push_notification/push_notification_class.dart';
 import 'package:http/http.dart' as http;
 class Network{
-  static fcmApiMethod(context,String token,fcmBody, fcmTitle, String topic)async {
+  static fcmApiMethod(context, String topic,String fcmBody, String fcmTitle)async {
     final url = Uri.parse("https://fcm.googleapis.com/v1/projects/push-notification-14cd2/messages:send");
     final headers = <String, String>{
       'Content-Type': 'application/json',

@@ -69,13 +69,13 @@ class _CreateNotificationState extends State<CreateNotification> {
                   try{
                   final fcmTitle = titleCon.text.toString();
                   final fcmBody = bodyCon.text.toString();
-                  final token = "c2PcMvccQXibpYmIk8rPdS:APA91bHt2dPmMybRvDRn82kD4tfuWTmXzZwMKJ22iyox11dkFu3_RmpAUs9WSJCNc-8WyrupiY3jJ1hMYNYTm-NRd658HNy2x0FDFHNYRYikrU_adEL3X_4";
+                  final token = "dL4AhASZSFiraSwflFkTg7:APA91bGYap-JlvB7xNxklxwegU1xaD_8bt8qn2P77uz3jZJJsoT1s9IEG6_8CrAQM833L9MxWx-SnsWx0jFJ9e93HtA-G8I9qK7jIU5qG8SCWhHvdmX-dBY";
                   final apiResponse = await Network.fcmApiMethod(
                     context,
-                      token,
+                      // token,
+                      "all",
                       fcmBody,
-                      fcmTitle,
-                      "all"
+                      fcmTitle
                   );
                   if(apiResponse != null && apiResponse != ""){
                     Utils.toastMsg("Api Response");
